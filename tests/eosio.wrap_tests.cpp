@@ -26,7 +26,7 @@ public:
 
       base_tester::push_action(config::system_account_name, N(setpriv),
                                  config::system_account_name,  mutable_variant_object()
-                                 ("account", "eosio.msig")
+                                 ("account", "weos.msig")
                                  ("is_priv", 1)
       );
 
@@ -52,7 +52,7 @@ public:
 
       base_tester::push_action(config::system_account_name, N(setpriv),
                                  config::system_account_name,  mutable_variant_object()
-                                 ("account", "eosio.wrap")
+                                 ("account", "weos.wrap")
                                  ("is_priv", 1)
       );
 
@@ -123,11 +123,11 @@ transaction eosio_wrap_tester::wrap_exec( account_name executer, const transacti
                   ("permission", name{config::active_name})
               );
   v.push_back( fc::mutable_variant_object()
-                 ("actor", "eosio.wrap")
+                 ("actor", "weos.wrap")
                  ("permission", name{config::active_name})
              );
    auto act_obj = fc::mutable_variant_object()
-                     ("account", "eosio.wrap")
+                     ("account", "weos.wrap")
                      ("name", "exec")
                      ("authorization", v)
                      ("data", fc::mutable_variant_object()("executer", executer)("trx", trx) );

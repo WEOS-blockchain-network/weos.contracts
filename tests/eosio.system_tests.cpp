@@ -10,7 +10,7 @@
 #include <eosio/chain/exceptions.hpp>
 #include <Runtime/Runtime.h>
 
-#include "eosio.system_tester.hpp"
+#include "weos.system_tester.hpp"
 struct _abi_hash {
    name owner;
    fc::sha256 hash;
@@ -5616,7 +5616,7 @@ BOOST_FIXTURE_TEST_CASE( change_limited_account_back_to_unlimited, eosio_system_
 
    BOOST_REQUIRE_EQUAL( error( "transaction net usage is too high: 128 > 0" ),
                         push_action( N(eosio), N(setalimits), mvo()
-                           ("account", "eosio.saving")
+                           ("account", "weos.saving")
                            ("ram_bytes", -1)
                            ("net_weight", -1)
                            ("cpu_weight", -1)
@@ -5640,7 +5640,7 @@ BOOST_FIXTURE_TEST_CASE( change_limited_account_back_to_unlimited, eosio_system_
 
    BOOST_REQUIRE_EQUAL( success(),
                         push_action( N(eosio), N(setalimits), mvo()
-                                          ("account", "eosio.saving")
+                                          ("account", "weos.saving")
                                           ("ram_bytes", ram_bytes_needed)
                                           ("net_weight", -1)
                                           ("cpu_weight", -1)

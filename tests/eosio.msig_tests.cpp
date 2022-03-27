@@ -25,7 +25,7 @@ public:
 
       auto trace = base_tester::push_action(config::system_account_name, N(setpriv),
                                             config::system_account_name,  mutable_variant_object()
-                                            ("account", "eosio.msig")
+                                            ("account", "weos.msig")
                                             ("is_priv", 1)
       );
 

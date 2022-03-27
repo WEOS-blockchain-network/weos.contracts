@@ -3,7 +3,7 @@ set -eo pipefail
 
 function usage() {
    printf "Usage: $0 OPTION...
-  -e DIR      Directory where EOSIO is installed. (Default: $HOME/eosio/X.Y)
+  -e DIR      Directory where EOSIO is installed. (Default: $HOME/weos/X.Y)
   -c DIR      Directory where EOSIO.CDT is installed. (Default: /usr/local/eosio.cdt)
   -t          Build unit tests.
   -y          Noninteractive mode (Uses defaults for each prompt.)
@@ -69,11 +69,11 @@ if [[ ${BUILD_TESTS} == true ]]; then
    nodeos-version-check
 
    # Include EOSIO_INSTALL_DIR in CMAKE_FRAMEWORK_PATH
-   echo "Using EOSIO installation at: $EOSIO_INSTALL_DIR"
+   echo "Using WEOS installation at: $EOSIO_INSTALL_DIR"
    export CMAKE_FRAMEWORK_PATH="${EOSIO_INSTALL_DIR}:${CMAKE_FRAMEWORK_PATH}"
 fi
 
-printf "\t=========== Building eosio.contracts ===========\n\n"
+printf "\t=========== Building weos.contracts ===========\n\n"
 RED='\033[0;31m'
 NC='\033[0m'
 CPU_CORES=$(getconf _NPROCESSORS_ONLN)

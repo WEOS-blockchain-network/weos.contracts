@@ -1,26 +1,26 @@
-# eosio.contracts
+# weos.contracts
 
 ## Version : 1.9.2
 
-The design of the EOSIO blockchain calls for a number of smart contracts that are run at a privileged permission level in order to support functions such as block producer registration and voting, token staking for CPU and network bandwidth, RAM purchasing, multi-sig, etc.  These smart contracts are referred to as the bios, system, msig, wrap (formerly known as sudo) and token contracts.
+The design of the WEOS blockchain calls for a number of smart contracts that are run at a privileged permission level in order to support functions such as block producer registration and voting, token staking for CPU and network bandwidth, RAM purchasing, multi-sig, etc.  These smart contracts are referred to as the bios, system, msig, wrap (formerly known as sudo) and token contracts.
 
-This repository contains examples of these privileged contracts that are useful when deploying, managing, and/or using an EOSIO blockchain.  They are provided for reference purposes:
+This repository contains examples of these privileged contracts that are useful when deploying, managing, and/or using an WEOS blockchain.  They are provided for reference purposes:
 
-   * [eosio.bios](./contracts/eosio.bios)
-   * [eosio.system](./contracts/eosio.system)
-   * [eosio.msig](./contracts/eosio.msig)
-   * [eosio.wrap](./contracts/eosio.wrap)
+   * [weos.bios](./contracts/weos.bios)
+   * [weos.system](./contracts/weos.system)
+   * [weos.msig](./contracts/weos.msig)
+   * [weos.wrap](./contracts/weos.wrap)
 
 The following unprivileged contract(s) are also part of the system.
-   * [eosio.token](./contracts/eosio.token)
+   * [weos.token](./contracts/weos.token)
 
 Dependencies:
-* [eosio.cdt v1.7.x](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.7.0)
-* [eosio v2.0.x](https://github.com/EOSIO/eos/releases/tag/v2.0.8) (optional dependency only needed to build unit tests)
+* [eosio.cdt v1.7.x](https://github.com/WEOS/weos.cdt/releases/tag/v1.7.0)
+* [weos v2.0.x](https://github.com/WEOS/eos/releases/tag/v2.0.8) (optional dependency only needed to build unit tests)
 
 ## Build
 
-To build the contracts follow the instructions in [Build and deploy](https://developers.eos.io/manuals/eosio.contracts/latest/build-and-deploy) section.
+To build the contracts follow the instructions in [Build and deploy](https://developers.eos.io/manuals/weos.contracts/latest/build-and-deploy) section.
 
 ## Contributing
 
